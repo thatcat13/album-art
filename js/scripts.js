@@ -17,7 +17,16 @@ $(document).ready(function(){
     var imgInput = $("input#img-input").val();
 
     var newAlbum = new AlbumItem(bandInput, albumInput, releaseInput, imgInput);
-
-    console.log(newAlbum);
-  })
+    $(".gallery").prepend(
+      `<div class="album-item">
+        <img class="album-img" src="`+ newAlbum.img +`" alt="">
+        <p class="band">` + newAlbum. band + `</p>
+        <p class="album">`+ newAlbum.title +`</p>
+        <p class="release-date">`+ newAlbum.release +`</p>
+      </div>`
+    );
+    // $(".album-submit").trigger("reset");
+    // $(".album-submit").empty();
+    $(".album-submit")[0].reset();
+  });
 });
