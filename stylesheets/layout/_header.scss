@@ -8,7 +8,9 @@
   height: 20vh;
   justify-content: center;
   padding: 2em 0;
-  border-bottom: 2px solid black;
+  box-shadow: 0 -1px 9px rgba(0, 0, 0, 0.19);
+  background: rgba(0, 0, 0, 0.06);
+  margin-bottom: 9px;
   .header-logo {
     display: flex;
     width: 100%;
@@ -28,6 +30,26 @@
   }
 }
 
+.hidden-logo1, .hidden-logo2,.hidden-logo3,.hidden-logo4 {
+  display: none;
+}
+
+.hidden-logo4 {
+  animation-delay: 0.25s;
+}
+
+.hidden-logo3 {
+  animation-delay: 0.5s;
+}
+
+.hidden-logo2 {
+  animation-delay: 0.75s;
+}
+
+.hidden-logo1 {
+  animation-delay: 1s;
+}
+
 @keyframes rotation {
 		from {
 				transform: rotate(0deg);
@@ -35,4 +57,54 @@
 		to {
 				transform: rotate(360deg);
 		}
+}
+
+@media (max-width: 540px) {
+  .header {
+    .header-logo {
+      img {
+        height: 75%;
+      }
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+
+@media (max-width: 725px) {
+  .header {
+    .header-logo {
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .hidden-logo4 {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hidden-logo3 {
+    display: flex;
+    animation-delay: 0.5s;
+  }
+}
+
+@media (min-width: 1450px) {
+  .hidden-logo2 {
+    display: flex;
+    animation-delay: 0.75s;
+  }
+}
+
+@media (min-width: 1700px) {
+  .hidden-logo1 {
+    display: flex;
+    animation-delay: 1s;
+  }
 }

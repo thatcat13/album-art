@@ -88,7 +88,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 20vh;
   justify-content: center;
   padding: 2em 0;
-  border-bottom: 2px solid black; }
+  box-shadow: 0 -1px 9px rgba(0, 0, 0, 0.19);
+  background: rgba(0, 0, 0, 0.06);
+  margin-bottom: 9px; }
   .header .header-logo {
     display: flex;
     width: 100%;
@@ -103,18 +105,57 @@ h1, h2, h3, h4, h5, h6 {
     .header .header-logo h1 {
       font-size: 3.5em; }
 
+.hidden-logo1, .hidden-logo2, .hidden-logo3, .hidden-logo4 {
+  display: none; }
+
+.hidden-logo4 {
+  animation-delay: 0.25s; }
+
+.hidden-logo3 {
+  animation-delay: 0.5s; }
+
+.hidden-logo2 {
+  animation-delay: 0.75s; }
+
+.hidden-logo1 {
+  animation-delay: 1s; }
+
 @keyframes rotation {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+@media (max-width: 540px) {
+  .header .header-logo img {
+    height: 75%; }
+  .header .header-logo h1 {
+    font-size: 2.5em; } }
+@media (max-width: 725px) {
+  .header .header-logo h1 {
+    font-size: 2.5em; } }
+@media (min-width: 1000px) {
+  .hidden-logo4 {
+    display: flex; } }
+@media (min-width: 1200px) {
+  .hidden-logo3 {
+    display: flex;
+    animation-delay: 0.5s; } }
+@media (min-width: 1450px) {
+  .hidden-logo2 {
+    display: flex;
+    animation-delay: 0.75s; } }
+@media (min-width: 1700px) {
+  .hidden-logo1 {
+    display: flex;
+    animation-delay: 1s; } }
 .content {
   display: flex;
   width: 100%;
   justify-content: flex-start; }
 
 .maincontent {
-  overflow: scroll;
+  overflow-y: auto;
+  scroll-behavior: smooth;
   height: 75vh;
   width: 75vw; }
 
@@ -136,6 +177,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 630px;
   color: white;
   background: url(../img/stardust.png);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,16 +191,22 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
     margin: 1em; }
   .album-item .band {
-    font-size: 1.7em; }
+    margin-top: 3em;
+    font-size: 3em; }
   .album-item .album {
-    font-size: 1.2em; }
+    font-size: 3em; }
+  .album-item .release-date {
+    font-size: 2em; }
   .album-item .title {
-    font-size: 1em; }
+    font-size: 20px; }
 
 .album-content {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   width: 600px;
   height: 600px;
-  background: grey;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   position: absolute;
   top: 2em;
   opacity: 0;
@@ -167,9 +215,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .album-item:hover .album-img {
   cursor: pointer;
-  animation: rotate 3s forwards ease-in-out 0s; }
+  animation: rotate 2s forwards ease-in-out 0s; }
 .album-item:hover .album-content {
-  animation: rotate2 3s forwards ease-in-out 0s; }
+  animation: rotate2 2s forwards ease-in-out 0s; }
 
 @keyframes rotate {
   0% {
@@ -191,22 +239,26 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2; } }
 .rating-area {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 25px 0; }
+  margin: 25px auto; }
   .rating-area select, .rating-area option {
     background-color: white; }
 
 .sidebar {
+  z-index: 5;
   position: relative;
   width: 25vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: 2px solid black; }
+  text-align: center; }
 
 .form {
   width: auto;
-  position: fixed; }
+  padding: 15px;
+  position: fixed;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 form {
   margin: 1em 0;
@@ -216,6 +268,34 @@ form {
     height: 3em;
     text-align: center;
     font-size: 1em;
-    margin: 1em 0; }
+    margin: 1em 0;
+    border-radius: 5px; }
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column; }
+
+  .maincontent {
+    width: 100%;
+    height: auto; }
+
+  .sidebar {
+    display: flex;
+    order: -1;
+    width: 100%; }
+    .sidebar .form {
+      position: relative; }
+
+  .album-item {
+    min-width: 420px;
+    min-height: 420px; }
+    .album-item img {
+      height: 400px;
+      width: 400px; }
+    .album-item .album-content {
+      width: 400px;
+      height: 400px; }
+      .album-item .album-content .band {
+        margin-top: 1em; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,16 +1,19 @@
 .sidebar {
+  z-index: 5;
   position: relative;
   width: 25vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: 2px solid black;
+  // border-left: 2px solid black;
+  text-align: center;
 }
 
 .form {
   width: auto;
-
+  padding: 15px;
   position: fixed;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 form {
@@ -22,5 +25,45 @@ form {
     text-align: center;
     font-size: 1em;
     margin: 1em 0;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content{
+    flex-direction: column;
+  }
+  .maincontent{
+    width: 100%;
+    height: auto;
+  }
+  .sidebar {
+    display: flex;
+    // height: 20vh;
+    order: -1;
+    width: 100%;
+    .form {
+      position: relative;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+    }
+  }
+
+  .album-item {
+    min-width: 420px;
+    min-height: 420px;
+    img {
+      height: 400px;
+      width: 400px;
+    }
+
+    .album-content {
+      width: 400px;
+      height: 400px;
+
+      .band {
+        margin-top: 1em;
+      }
+    }
   }
 }

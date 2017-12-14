@@ -6,9 +6,11 @@
 
 .maincontent {
   // flex-grow: 1;
-  overflow: scroll;
+  overflow-y: auto;
+  scroll-behavior: smooth;
   height: 75vh;
   width: 75vw;
+  // padding-right: 30px;
 }
 
 .gallery{
@@ -31,6 +33,7 @@
   min-height: 630px;
   color: white;
   background: url(../img/stardust.png);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,24 +50,29 @@
     margin: 1em;
   }
   .band{
-    font-size: 1.7em;
+    margin-top: 3em;
+    font-size: 3em;
   }
 
   .album {
-    font-size: 1.2em;
+    font-size: 3em;
   }
   .release-date {
+    font-size: 2em;
 
   }
  .title {
-   font-size: 1em;
-   
+   font-size: 20px;
+
  }
 }
 .album-content {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   width: 600px;
   height: 600px;
-  background: grey;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);;
   position: absolute;
   top: 2em;
   opacity: 0;
@@ -75,10 +83,10 @@
 .album-item:hover{
   .album-img{
   cursor: pointer;
-  animation: rotate 3s forwards ease-in-out 0s;
+  animation: rotate 2s forwards ease-in-out 0s;
   }
   .album-content{
-    animation: rotate2 3s forwards ease-in-out 0s;
+    animation: rotate2 2s forwards ease-in-out 0s;
   }
 }
 
@@ -88,6 +96,7 @@
     opacity: 1;
     z-index: 2;
   }
+
   100% {
     transform: rotateY(360deg);
     opacity: 0;
@@ -109,8 +118,9 @@
 
 .rating-area {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 25px 0;
+  margin: 25px auto;
   select, option {
     background-color: white;
   }
