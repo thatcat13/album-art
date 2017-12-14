@@ -96,7 +96,9 @@ html {
   justify-content: flex-start; }
 
 .maincontent {
-  flex-grow: 1; }
+  flex-grow: 1;
+  overflow: scroll;
+  height: 75vh; }
 
 .gallery {
   display: flex;
