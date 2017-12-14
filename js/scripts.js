@@ -9,6 +9,9 @@ function AlbumItem(band, title, release, img){
 
 
 $(document).ready(function(){
+  $('#rating').barrating({
+    theme: 'bars-movie'
+    });
   $(".album-submit").submit(function(event) {
     event.preventDefault();
     var bandInput = $("input#band-input").val();

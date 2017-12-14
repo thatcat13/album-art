@@ -36,7 +36,7 @@
   p {
     margin: .5em;
   }
-  .album-img {
+  img {
     margin: 1em;
   }
   .band{
@@ -50,4 +50,29 @@
 
   }
 
+}
+.album-item:hover .album-img{
+  cursor: pointer;
+  animation: rotate 1s forwards linear 0s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(180deg);
+    opacity: 0;
+    background-color: white;
+  }
+}
+
+.rating-area {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  select, option {
+    background-color: white;
+  }
 }
