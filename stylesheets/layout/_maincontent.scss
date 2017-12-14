@@ -23,9 +23,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .album-item {
+  min-width: 630px;
+  min-height: 630px;
   color: white;
   background: url(../img/stardust.png);
   display: flex;
@@ -33,14 +36,18 @@
   justify-content: center;
   align-items: center;
   margin: 1em;
+  // position: relative;
   p {
     margin: .5em;
   }
   img {
+    height: 600px;
+    width: 600px;
+    z-index: 2;
     margin: 1em;
   }
   .band{
-    font-size: 1.4em;
+    font-size: 1.7em;
   }
 
   .album {
@@ -49,22 +56,54 @@
   .release-date {
 
   }
-
+ .title {
+   font-size: 1em;
+   
+ }
 }
-.album-item:hover .album-img{
+.album-content {
+  width: 600px;
+  height: 600px;
+  background: grey;
+  position: absolute;
+  top: 2em;
+  opacity: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.album-item:hover{
+  .album-img{
   cursor: pointer;
-  animation: rotate 1s forwards linear 0s;
+  animation: rotate 3s forwards ease-in-out 0s;
+  }
+  .album-content{
+    animation: rotate2 3s forwards ease-in-out 0s;
+  }
 }
 
 @keyframes rotate {
   0% {
     transform: rotateY(0deg);
     opacity: 1;
+    z-index: 2;
   }
   100% {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
     opacity: 0;
-    background-color: white;
+    z-index: 0;
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    transform: rotateY(360deg);
+    opacity: 1;
+    z-index: 2;
   }
 }
 

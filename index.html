@@ -21,58 +21,56 @@
       <div class="content">
         <div class="maincontent">
           <div class="gallery">
-            <div class="gallery-object">
+            <!-- <div class="gallery-object">
               <div class="album-item">
                 <img class="album-img" src="https://img.discogs.com/b6SoNzlLRhwhAd5jqpDuXS4nRC4=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-370151-1462720365-8649.jpeg.jpg" alt="">
-                <p class="band">Band: Sonic Youth</p>
-                <p class="album">Album: Goo</p>
-                <p class="release-date">Release Date: 1992</p>
-                <div class="rating-area">
-                  <p>Rate Me!</p>              
-                  <select id="rating">
-                    <option value="1">Bad</option>
-                    <option value="2">Meh</option>
-                    <option value="3">Not Horrible</option>
-                    <option value="4">Pretty Alright</option>
-                    <option value="5">AWESOME!</option>
-                  </select>
+                <div class="album-content">
+                  <p class="band">Band: Sonic Youth</p>
+                  <p class="album">Album: Goo</p>
+                  <p class="release-date">Release Date: 1992</p>
+                  <div class="rating-area">
+                    <p>Rate Me!</p>
+                    <select id="rating">
+                      <option value="1">Bad</option>
+                      <option value="2">Meh</option>
+                      <option value="3">Not Horrible</option>
+                      <option value="4">Pretty Alright</option>
+                      <option value="5">AWESOME!</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="gallery-object">
               <div class="album-item">
                 <img class="album-img" src="https://img.discogs.com/b6SoNzlLRhwhAd5jqpDuXS4nRC4=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-370151-1462720365-8649.jpeg.jpg" alt="">
-                <p class="band">Sonic Youth</p>
-                <p class="album">Goo</p>
-                <p class="release-date">1992</p>
+                <div class="album-content">
+                  <p class="band">Band: Sonic Youth</p>
+                  <p class="album">Album: Goo</p>
+                  <p class="release-date">Release Date: 1992</p>
+                  <div class="rating-area">
+                    <p>Rate Me!</p>
+                    <select id="rating">
+                      <option value="1">Bad</option>
+                      <option value="2">Meh</option>
+                      <option value="3">Not Horrible</option>
+                      <option value="4">Pretty Alright</option>
+                      <option value="5">AWESOME!</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="gallery-object">
-              <div class="album-item">
-                <img class="album-img" src="https://img.discogs.com/b6SoNzlLRhwhAd5jqpDuXS4nRC4=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-370151-1462720365-8649.jpeg.jpg" alt="">
-                <p class="band">Band: Sonic Youth</p>
-                <p class="album">Album: Goo</p>
-                <p class="release-date">Release Date: 1992</p>
-              </div>
-            </div>
-            <div class="gallery-object">
-              <div class="album-item">
-                <img class="album-img" src="https://img.discogs.com/b6SoNzlLRhwhAd5jqpDuXS4nRC4=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-370151-1462720365-8649.jpeg.jpg" alt="">
-                <p class="band">Sonic Youth</p>
-                <p class="album">Goo</p>
-                <p class="release-date">1992</p>
-              </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="sidebar">
           <div class="form">
             <h2>List Your Vinyl!</h2>
             <form class="album-submit" action="index.html" method="post">
-              <input type="text" name="band" value="" id="band-input" placeholder="Band Name">
-              <input type="text" name="album" value="" id="album-input" placeholder="Album Name">
-              <input type="text" name="released" value="" id="release-input" placeholder="Release Date">
-              <input type="text" name="imguri" value="" id="img-input" placeholder="Image Link">
+              <input type="text" name="band" value="" id="band-input" placeholder="Band Name" required>
+              <input type="text" name="album" value="" id="album-input" placeholder="Album Name" required>
+              <input type="text" name="released" value="" id="release-input" placeholder="Release Date" required>
+              <input type="text" name="imguri" value="" id="img-input" placeholder="Image Link" required>
               <button type="submit" name="button">Add Album!</button>
             </form>
           </div>
