@@ -1,0 +1,25 @@
+.content {
+ display: flex;
+ width: 100%;
+ justify-content: flex-start;
+}
+
+.maincontent {
+  flex-grow: 1;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.album-item {
+  flex-basis: 42%;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}

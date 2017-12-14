@@ -1,0 +1,22 @@
+.sidebar {
+  position: relative;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px solid black;
+}
+
+.form {
+  width: auto;
+
+  position: fixed;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  input, button {
+    margin: 5px 0;
+  }
+}
