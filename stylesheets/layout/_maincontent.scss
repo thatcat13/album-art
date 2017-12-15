@@ -39,6 +39,7 @@
   justify-content: center;
   align-items: center;
   margin: 1em;
+  perspective: 1000px;
   // position: relative;
   p {
     margin: .5em;
@@ -48,6 +49,7 @@
     width: 600px;
     z-index: 2;
     margin: 1em;
+
   }
   .band{
     margin-top: 3em;
@@ -72,13 +74,20 @@
   align-content: center;
   width: 600px;
   height: 600px;
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);;
+  background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  animation: AnimationName 1s ease infinite;
   position: absolute;
-  top: 2em;
+  // top: 2em;
   opacity: 0;
   z-index: 1;
   text-align: center;
+  @keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
 }
+
 
 .album-item:hover{
   .album-img{
